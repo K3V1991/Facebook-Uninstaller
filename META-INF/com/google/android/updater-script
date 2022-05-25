@@ -1,32 +1,38 @@
 ui_print("############################################");
-
-unmount("/cache");
-unmount("/data");
 unmount("/system");
+ui_print(" ");
 
-ui_print("Facebook Uninstaller");
+ui_print("Facebook Uninstaller Script");
+ui_print(" ");
 
 ui_print("Mounting Partitions");
-run_program("/sbin/mount", "-t", "auto", "/cache");
-run_program("/sbin/mount", "-t", "auto", "/data");
 run_program("/sbin/mount", "-t", "auto", "/system");
+run_program("/sbin/mount", "-t", "auto", "/cache");
+ui_print("Partitions mounted");
+ui_print(" ");
 
 ui_print("Removing FB, FB Installer & FB Manager");
-delete_recursive("/data/app/com.example.facebook");
-delete_recursive("/data/app/com.facebook.android");
-delete_recursive("/data/app/com.facebook.katana");
-delete_recursive("/data/app/com.facebook.orca");
-delete_recursive("/system/app/FBAppManager");
-delete_recursive("/system/app/FBAppManager_NS");
+
 delete_recursive("/system/app/Facebook_AppManager");
-delete_recursive("/system/app/Facebook_stub");
-delete_recursive("/system/priv-app/FBInstaller");
-delete_recursive("/system/priv-app/FBInstaller_NS");
-delete_recursive("/system/priv-app/FBServices");
+
 delete_recursive("/system/priv-app/Facebook_Installer");
+
+delete_recursive("/system/priv-app/FBInstaller_NS");
+
+delete_recursive("/system/app/FBAppManager_NS");
+
+delete_recursive("/system/app/Facebook_stub");
+
+delete_recursive("/system/app/FBAppManager");
+
+delete_recursive("/system/priv-app/FBInstaller");
+
+delete_recursive("/system/priv-app/FBServices");
+
 delete_recursive("/system/priv-app/SNS_v2_N");
 
 ui_print("Done!");
+ui_print(" ");
 
 ui_print("Cleaning Cache and Dalvik-Cache");
 delete_recursive("/cache");
@@ -34,7 +40,6 @@ delete_recursive("/data/dalvik-cache");
 
 ui_print("Unmounting Partitions");
 unmount("/cache");
-unmount("/data");
 unmount("/system");
-
+ui_print(" ");
 ui_print("############################################");
