@@ -1,4 +1,4 @@
-<p align="center"><img src="https://i.ibb.co/fG0gq54/Facebook-Uninstaller.png" width="170"></a>
+<p align="center"><img src="https://github.com/K3V1991/Facebook-Uninstaller/blob/main/Facebook-Uninstaller.png" width="170"></a>
 <h1 align="center"><b>Facebook Uninstaller (TWRP)</b></h1>
 <h4 align="center">This flashable Zip removes Facebook</h4>
 <br />
